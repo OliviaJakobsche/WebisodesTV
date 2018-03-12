@@ -1,0 +1,11 @@
+<h1>Lista seriali</h1>
+
+{% if all_shows %}
+    <ul>
+        {% for show in all_shows %}
+        <li><a href="{% url 'detail' show.id %}">{{ show.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>Brak seriali.</h3>
+{% endif %}

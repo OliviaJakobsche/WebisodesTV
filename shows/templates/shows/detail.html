@@ -1,0 +1,17 @@
+<img src="{{ show.series_logo }}" width="250px" height="350px">
+
+<h1>{{ show.title }} ({{ show.release }})</h1>
+
+{% for i in max_season %}
+<h2>Sezon {{ i }}</h2>
+<ul>
+    {% for episode in episodes %}
+    {% if episode.season_nr == i %}
+    <li>
+        {% if episode.episode_nr < 10 %}0{% endif %}{{episode.episode_nr }}
+        - {{ episode.title }}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}

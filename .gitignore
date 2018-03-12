@@ -1,3 +1,4 @@
 .idea/
 WebisodesTV/__pycache__/
 shows/__pycache__/
+shows/migrations/__pycache__/
